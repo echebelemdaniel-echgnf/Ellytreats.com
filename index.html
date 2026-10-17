@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ellytreats | Cakes & Soups in Port Harcourt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">Ellytreats</a><a class="btn alt" href="#order">Order</a></header>
+
+<div class="hero">
+<div>
+<h1>Cakes and soups, made with care.</h1>
+<p>Elegant birthday cakes in butter cream, whipped cream or fondant, and soup by the litre. Made to order in Port Harcourt.</p>
+<div class="btns"><a class="btn" href="#order">Price your cake</a><a class="btn alt" href="#soups">View soups</a></div>
+</div>
+<div class="arch"><div>
+<svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+<rect x="60" y="120" width="80" height="40" rx="4"/><rect x="75" y="80" width="50" height="40" rx="4"/>
+<path d="M60 135c10 8 20 8 30 0s20 8 30 0 14 6 20 0M75 95c8 6 16 6 25 0s16 6 25 0"/>
+<path d="M100 80V55M100 55c-5-8-3-14 0-18 3 4 5 10 0 18z"/><path d="M45 160h110"/>
+</svg></div></div>
+</div>
+
+<section id="order">
+<h2>Build your order</h2>
+<p class="sub">Add cakes and soups, fill in your details, then send the order straight to Ellytreats on WhatsApp.</p>
+<div class="two">
+<div class="order">
+<h3>Cake</h3>
+<div><label for="size">Size</label><select id="size"></select></div>
+<div><label for="type">Finish</label><select id="type"></select></div>
+<div><label for="msg">Writing on the cake (optional)</label><input id="msg" maxlength="60" placeholder="Happy Birthday Deedee"></div>
+<div class="total" id="total" aria-live="polite"></div>
+<button class="btn alt" id="addCake" type="button">Add cake</button>
+<h3 style="margin-top:8px">Soup</h3>
+<div><label for="soup">Kind</label><select id="soup"></select></div>
+<div><label for="litres">Litres</label><input id="litres" type="number" min="1" max="20" value="1"></div>
+<button class="btn alt" id="addSoup" type="button">Add soup</button>
+</div>
+<div class="order">
+<h3>Your order</h3>
+<ul class="list" id="cart"></ul>
+<div><label>Total</label><div class="total" id="grand">₦0</div></div>
+<div><label for="name">Your name</label><input id="name" autocomplete="name"></div>
+<div><label for="phone">Phone number</label><input id="phone" type="tel" autocomplete="tel"></div>
+<div><label for="date">Date needed</label><input id="date" type="date"></div>
+<div><label for="mode">Pickup or delivery</label><select id="mode"><option>Pickup</option><option>Delivery</option></select></div>
+<div id="addrBox" hidden><label for="addr">Delivery address</label><input id="addr" autocomplete="street-address"></div>
+<div id="err" class="err" role="alert"></div>
+<button class="btn" id="send" type="button">Send order on WhatsApp</button>
+<p class="sub" style="margin:0;font-size:.9rem">Ellytreats will confirm availability and payment details with you on WhatsApp.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>All cake prices</h2>
+<p class="sub">Prices in naira.</p>
+<div class="grid"><table id="tbl"><thead><tr><th>Size</th><th>Butter cream</th><th>Whipped cream</th><th>Fondant</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section>
+<div class="two">
+<div><h2>Cakes on budget</h2><p class="sub">Simple cakes at lower prices.</p><ul class="list" id="budget"></ul></div>
+<div id="soups"><h2>Soups</h2><p class="sub">Price per litre.</p><ul class="list" id="soupList"></ul></div>
+</div>
+</section>
+</div>
+
+<footer>
+<div class="wrap">
+<h2>Place an order</h2>
+<div>Call or WhatsApp: <a href="tel:+2348089221013">08089221013</a></div>
+<div>Instagram: <a href="https://instagram.com/ellytreats" target="_blank" rel="noopener">@ellytreats</a></div>
+<div>Port Harcourt, Rivers State</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

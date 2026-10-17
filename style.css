@@ -1,0 +1,52 @@
+:root{--bg:#fbf3f0;--surface:#fffaf8;--ink:#3b1a26;--muted:#80626b;--plum:#4a1f2e;--rose:#b76e79;--blush:#f1d5d3;--gold:#b98f55;--line:#e6cfc9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0f15;--surface:#2a171f;--ink:#f6e6e2;--muted:#c9a9ad;--plum:#f0d0cf;--rose:#d98f9a;--blush:#4a2733;--gold:#d3ad78;--line:#4b2c37}}
+:root[data-theme="dark"]{--bg:#1d0f15;--surface:#2a171f;--ink:#f6e6e2;--muted:#c9a9ad;--plum:#f0d0cf;--rose:#d98f9a;--blush:#4a2733;--gold:#d3ad78;--line:#4b2c37}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 'Jost',system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.05;margin:0;letter-spacing:.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.logo{font:italic 600 2rem 'Cormorant Garamond',serif;color:var(--plum);text-decoration:none}
+.btn{display:inline-block;background:var(--plum);color:var(--bg);padding:13px 28px;border-radius:999px;font-weight:500;letter-spacing:.04em;text-decoration:none;border:0;font-size:.95rem;cursor:pointer;font-family:inherit}
+.btn.alt{background:transparent;color:var(--plum);border:1px solid var(--plum)}
+.hero{display:grid;gap:36px;padding:48px 0 24px;align-items:center}
+@media(min-width:760px){.hero{grid-template-columns:1.15fr .85fr;padding:72px 0 32px}}
+.hero h1{font-size:clamp(3rem,9vw,5.2rem);color:var(--plum)}
+.hero p{max-width:36ch;font-size:1.1rem;color:var(--muted);margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.arch{background:var(--blush);border-radius:999px 999px 24px 24px;aspect-ratio:3/4;max-width:340px;width:100%;justify-self:center;display:grid;place-items:center;border:1px solid var(--gold);padding:14px}
+.arch div{width:100%;height:100%;border:1px solid var(--gold);border-radius:999px 999px 14px 14px;display:grid;place-items:center}
+.arch svg{width:72%;color:var(--plum)}
+section{padding:64px 0 8px}
+h2{font-size:clamp(2.1rem,5vw,3rem);color:var(--plum);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 26px}
+.order{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:20px;max-width:560px}
+label{font-weight:500;display:block;margin-bottom:6px;color:var(--muted);font-size:.95rem}
+select{width:100%;padding:13px 14px;font:inherit;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.total{font:600 3rem 'Cormorant Garamond',serif;color:var(--rose);line-height:1}
+.grid{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px;background:var(--surface);border:1px solid var(--line)}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+th{font:600 1.2rem 'Cormorant Garamond',serif;color:var(--plum);background:var(--blush)}
+td:first-child{font-weight:500}
+.two{display:grid;gap:40px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.list{list-style:none;padding:0;margin:0}
+.list li{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.list b{color:var(--rose);font-weight:600}
+footer{margin-top:72px;background:var(--plum);color:var(--bg);padding:48px 0;text-align:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer{background:#3a1826;color:#f6e6e2}}
+footer .wrap{display:grid;gap:8px}
+footer h2{color:var(--blush);font-style:italic}
+footer a{color:var(--blush)}
+input{width:100%;padding:13px 14px;font:inherit;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+h3{font-size:1.6rem;color:var(--plum)}
+button.btn{font-family:inherit}
+.err{color:#b3261e;font-weight:500;min-height:0}
+.list li button{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0 0 0 10px}
+.list small{display:block;color:var(--muted)}
+.empty{color:var(--muted)}
